@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CS351 Weather App</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <button>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUlJREFUSEu1lYsNAUEQhkclqASVoBJUgkpQCZ1wXzJ/MtjZPXK3iezZx3z/PG5uYiOPycj2rQaYmdnazJb+e3Tz1cyYzz439WWAXXdzX7kN5GRmhxahBLi4Yu4CublyPMKbaYDj0aoG+QRsOgNHd3/rhkv3gSGEGRGpJxHA4btbQxXqWCNcKCcsDMA8swaE51RMBCjuxJYLjCwXczeMt3idehEBOoxxIBoYkHp5I4PyIs1FBBAeQiJ1pdjLIHvcVVgRwL2v8SugZOPpi8WSj4sqTyW4VeLsq+pi3t7utZLcgihvvQClMq0BYj7SvP37okXjvV80qZXb/Md1tQr+4+XC617nqSDyplJOcxA3Ws2OsygnyUBTSKtdEwoUMzPUstV7Yk8qQob44FQhQwCUG3XXt1YzFEAQQhn7WPWT2XrJeu0P6UERODrgBZ5/VhnZJN56AAAAAElFTkSuQmCC"
+            alt="Search Icon"
+          />
+        </button>
+      </div>
+
+      <div class="weather">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASJJREFUSEvllNkNwjAMht1NYBOYBJgEmASYBDaBTYCviiM3dS5VPGGpUpXjv5xkkB/X8GN8+Q+ClYjsRGQTvpeI8D1E5FyLuBYRoPcCCETXElGJwIIr0C2QMaeumDsERzMtJQKUA0QU24yL43f8FCJjDWST8gjI/BLAWbz2NhoUFQLRrCcpwT6A636sk3GpNErXqSWwmbMY8JllhwnHz+RkxX2WgFhwgGLAe+ptFgMe+2EJUIEaJnHQW7Z3MS6PIG2qqkv75Y3buMCZvEW509BDYPs4CvKabC8V/5Yg9w+WjSj2MbWtF0fzZ76FoKnJCooSiLA75miqFJc+gJMTWHvswG5xkD1xvQQtbqpvUen85yJa5KBbtd3QElHvjV4UUTfZB0/aURmkc7uLAAAAAElFTkSuQmCC"
+          alt="Weather Icon"
+        />
+        <h1 class="temp">22°C</h1>
+        <h2 class="city">Tokyo</h2>
+      </div>
+
+      <div class="card-content">
+        <div class="humidity">
+          <p>Humidity</p>
+          <div class="humidity-percent">50%</div>
+        </div>
+        <div class="wind">
+          <p>Wind Speed</p>
+          <div class="wind-speed">15 km/h</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
