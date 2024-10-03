@@ -9,6 +9,7 @@ const cityElement = document.querySelector(".city");
 const humidityElement = document.querySelector(".humidity-percent");
 const windSpeedElement = document.querySelector(".wind-speed");
 const weatherIcon = document.querySelector(".weatherIcon");
+const changeBG = document.querySelector(".main-bg");
 
 const rainIcon =
   "data:image/png;base64,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";
@@ -42,12 +43,24 @@ const updateWeatherInfo = (data) => {
     humidityElement.textContent = `${main.humidity}%`;
     windSpeedElement.textContent = `${wind.speed} km/h`;
 
-    switch (weather.main) {
+    const weatherCondition = weather[0].main;
+
+    switch (weatherCondition) {
       case "Clouds":
+        weatherIcon.src = cloudIcon;
+        changeBG.style.backgroundImage = `url('./img/${weatherCondition}.jpeg')`;
         break;
-      case y:
+      case "Rain":
+        weatherIcon.src = rainIcon;
+        changeBG.style.backgroundImage = `url('./img/${weatherCondition}.jpeg')`;
         break;
-      case y:
+      case "Clear":
+        weatherIcon.src = clearIcon;
+        changeBG.style.backgroundImage = `url('./img/${weatherCondition}.jpeg')`;
+        break;
+      default:
+        weatherIcon.src = "./img/Default.jpeg";
+        changeBG.style.backgroundImage = `url('./img/Default.jpeg')`;
         break;
     }
   }
