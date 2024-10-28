@@ -1,38 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap");
 
 *,
-body {
-  padding: 0;
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Kanit", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 body {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("./img/Default.jpeg");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  background-repeat: no-repeat;
 }
 
 .card {
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
-
+  padding: 2rem;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   color: white;
@@ -43,30 +44,24 @@ body {
   opacity: 1;
 }
 
-::-ms-input-placeholder {
-  color: white;
-}
 .search {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 20px;
-  color: white;
+  align-items: center;
+  gap: 1rem;
 }
 
 .search input {
-  width: 90%;
-  height: 80%;
+  flex: 1;
   padding: 12px 20px;
   border: 1px solid #ccc;
   border-radius: 30px;
   font-size: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   outline: none;
-  transition: box-shadow 0.3s ease;
   background: transparent;
   color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .search input:focus {
@@ -74,24 +69,22 @@ body {
 }
 
 .search button {
-  width: 55px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
+  border: none;
   background: transparent;
-  border: 1px solid #ccc;
   cursor: pointer;
-  border-radius: 50px;
-  padding: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .search button img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .search button:hover {
@@ -99,22 +92,19 @@ body {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-.search button:active {
-  transform: scale(1);
-  box-shadow: none;
-}
-
 .temp {
-  font-size: 5rem;
+  font-size: 4rem;
+  text-align: center;
 }
 
 .city {
-  font-size: 3em;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .card-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
@@ -123,24 +113,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
+/* Responsive styling */
 @media (min-width: 768px) {
   .card {
-    width: 40%;
-    height: 60%;
-  }
-
-  .search {
-    width: 80%;
+    width: 50%;
   }
 }
 
 @media (min-width: 1024px) {
-  /* For desktop screens */
   .card {
     width: 30%;
-    height: 60%;
   }
 }
