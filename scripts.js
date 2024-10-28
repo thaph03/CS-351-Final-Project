@@ -43,24 +43,37 @@ const updateWeatherInfo = (data) => {
     humidityElement.textContent = `${main.humidity}%`;
     windSpeedElement.textContent = `${wind.speed} km/h`;
 
-    const weatherCondition = weather[0].main;
-
     switch (weatherCondition) {
       case "Clouds":
         weatherIcon.src = cloudIcon;
-        changeBG.style.backgroundImage = `url('./img/${weatherCondition}.jpeg')`;
+        changeBG.style.backgroundImage = ""; // Clear current background first
+        setTimeout(() => {
+          changeBG.style.backgroundImage = `url('./clouds.jpeg')`;
+        }, 50);
         break;
+
       case "Rain":
         weatherIcon.src = rainIcon;
-        changeBG.style.backgroundImage = `url('./img/${weatherCondition}.jpeg')`;
+        changeBG.style.backgroundImage = "";
+        setTimeout(() => {
+          changeBG.style.backgroundImage = `url('./rain.jpeg')`;
+        }, 50);
         break;
+
       case "Clear":
         weatherIcon.src = clearIcon;
-        changeBG.style.backgroundImage = `url('./img/${weatherCondition}.jpeg')`;
+        changeBG.style.backgroundImage = "";
+        setTimeout(() => {
+          changeBG.style.backgroundImage = `url('./clear.jpeg')`;
+        }, 50);
         break;
+
       default:
-        weatherIcon.src = "./img/Default.jpeg";
-        changeBG.style.backgroundImage = `url('./img/Default.jpeg')`;
+        weatherIcon.src = "./Default.jpeg";
+        changeBG.style.backgroundImage = "";
+        setTimeout(() => {
+          changeBG.style.backgroundImage = `url('./Default.jpeg')`;
+        }, 50);
         break;
     }
   }
