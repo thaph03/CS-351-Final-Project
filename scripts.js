@@ -55,13 +55,13 @@ function updateUI(data) {
 function updateWeatherIcon(weatherType) {
   if (weatherType === "Rain") {
     elements.weatherIcon.src = icons.rain;
-    elements.changeBG.style.backgroundImage = "url('./rainBG.jpeg')";
+    elements.changeBG.style.backgroundImage = "url('images/rainBG.jpeg')";
   } else if (weatherType === "Clouds") {
     elements.weatherIcon.src = icons.cloud;
-    elements.changeBG.style.backgroundImage = "url('//cloudsBG.jpeg')";
+    elements.changeBG.style.backgroundImage = "url('images/cloudsBG.jpeg')";
   } else if (weatherType === "Clear") {
     elements.weatherIcon.src = icons.clear;
-    elements.changeBG.style.backgroundImage = "url('//clearBG.jpeg')";
+    elements.changeBG.style.backgroundImage = "url('images/clearBG.jpeg')";
   }
 }
 
